@@ -1,0 +1,117 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 9 key-value pairs.
+Below are 9 of them:
+ 1 key:             labrador_puppy.jpg  label:                   labrador
+ 2 key:           dachshund_cherry.jpg  label:                  dachshund
+ 3 key:           scottish_terrier.jpg  label:                   scottish
+ 4 key:                corgi_cute.jpeg  label:                      corgi
+ 5 key:              borzoi_hound.jpeg  label:                     borzoi
+ 6 key:               afgan_hound.jpeg  label:                      afgan
+ 7 key:              poodle_puppy.jpeg  label:                     poodle
+ 8 key:           dachshund_puppy.jpeg  label:                  dachshund
+ 9 key:            dachshund_stair.jpg  label:                  dachshund
+
+     MATCH:
+
+            labrador_puppy.jpg: 
+Real:                   labrador   Classifier:             labrador retriever
+
+          scottish_terrier.jpg: 
+Real:                   scottish   Classifier: scotch terrier, scottish terrier, scottie
+
+               corgi_cute.jpeg: 
+Real:                      corgi   Classifier: pembroke, pembroke welsh corgi, corgi
+
+             poodle_puppy.jpeg: 
+Real:                     poodle   Classifier:               miniature poodle
+
+ NOT A MATCH:
+
+          dachshund_cherry.jpg: 
+Real:                  dachshund   Classifier:            rhodesian ridgeback
+
+             borzoi_hound.jpeg: 
+Real:                     borzoi   Classifier:                  border collie
+
+              afgan_hound.jpeg: 
+Real:                      afgan   Classifier:                         briard
+
+          dachshund_puppy.jpeg: 
+Real:                  dachshund   Classifier:                        redbone
+
+           dachshund_stair.jpg: 
+Real:                  dachshund   Classifier:        black-and-tan coonhound
+
+# Total Images 9 # Matches: 4 # NOT Matches: 5
+
+     MATCH:
+
+            labrador_puppy.jpg: 
+Real:                   labrador   Classifier:             labrador retriever  
+PetLabelDog: 0  ClassLabelDog: 1
+
+          scottish_terrier.jpg: 
+Real:                   scottish   Classifier: scotch terrier, scottish terrier, scottie  
+PetLabelDog: 0  ClassLabelDog: 1
+
+               corgi_cute.jpeg: 
+Real:                      corgi   Classifier: pembroke, pembroke welsh corgi, corgi  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             poodle_puppy.jpeg: 
+Real:                     poodle   Classifier:               miniature poodle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+          dachshund_cherry.jpg: 
+Real:                  dachshund   Classifier:            rhodesian ridgeback  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             borzoi_hound.jpeg: 
+Real:                     borzoi   Classifier:                  border collie  
+PetLabelDog: 1  ClassLabelDog: 1
+
+              afgan_hound.jpeg: 
+Real:                      afgan   Classifier:                         briard  
+PetLabelDog: 0  ClassLabelDog: 1
+
+          dachshund_puppy.jpeg: 
+Real:                  dachshund   Classifier:                        redbone  
+PetLabelDog: 1  ClassLabelDog: 1
+
+           dachshund_stair.jpg: 
+Real:                  dachshund   Classifier:        black-and-tan coonhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 9 # Matches: 4 # NOT Matches: 5
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  33.3
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  9  N Dog Images:  6  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:  33.3
+
+ *** results summary for cnn model architecture ALEXNET ***
+N Images            :   9
+N Dog Images        :   6
+N Not-Dog Images    :   3
+ 
+pct_correct_dogs: 100.0
+pct_match: 44.44444444444444
+pct_correct_breed: 33.33333333333333
+pct_correct_notdogs: 100.0
+
+ incorrect dog breed assignment:
+real:                  dachshund classifier:            rhodesian ridgeback
+real:                     borzoi classifier:                  border collie
+real:                  dachshund classifier:                        redbone
+real:                  dachshund classifier:        black-and-tan coonhound
+
+** Total Elapsed Runtime: 0:0:0
