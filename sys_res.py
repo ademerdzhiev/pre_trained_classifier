@@ -1,9 +1,16 @@
 # PROGRAMMER: Angel
 # DATE CREATED: 24.04.2020
-# REVISED DATE: 10.05.2020
+# REVISED DATE: 11.05.2020
+
+from get_input_args import get_input_args
 
 
-def sys_res(tuple_files_res):
+def get_arg():
+    in_arg = get_input_args()
+    return in_arg.dir
+
+
+def sys_res(dir_arg):
     """
     Prints the final results frоm the "Use a Pre-trained Image Classifier to Identify Dog Breeds"
     systematized in a table
@@ -16,6 +23,14 @@ def sys_res(tuple_files_res):
     # dictionary with key, the name of the output file for the respective cnn, and the value is a list with following results:
     # % dogs-correct, % match-labels, % breeds-correct, % not-a-dog-correct
     final_res = dict()
+
+    tuple_files_res = tuple()
+
+    # check which is the images directory
+    if dir_arg == 'pet_images/':
+        tuple_files_res = ("resnet_pet-images.txt", "alexnet_pet-images.txt", "vgg_pet-images.txt")
+    elif dir_arg == 'uploaded_images/':
+        tuple_files_res = ("resnet_uploaded-images.txt", "alexnet_uploaded-images.txt", "vgg_uploaded-images.txt")
 
     # loop to read through each files and assign the correct values in the final_res dictionary
     for file in tuple_files_res:
@@ -62,5 +77,4 @@ def sys_res(tuple_files_res):
     print(120 * "-")
 
 
-print_tuple = ("resnet_pet-images.txt", "alexnet_pet-images.txt", "vgg_pet-images.txt")
-sys_res(print_tuple)
+sys_res(get_arg())
